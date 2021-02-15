@@ -10,7 +10,11 @@
 
   <link rel="stylesheet" type="text/css" href="{% static '/css/main.css' %}">
 
-  <title>CRM - {{ title }}</title>
+  {% if title %}
+    <title>CRM - {{ title }}</title>
+  {% else %}
+    <title>CRM</title>
+  {% endif %}
 </head>
 <body>
   {% include './navbar.html' %}

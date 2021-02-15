@@ -14,7 +14,13 @@
 					<th>Customer</th>
 					<th>Orders</th>
 				</tr>
-
+				{% for order in orders %}
+				<tr>
+					<td></td>
+					<td>{{ order.customer }}</td>
+					<td>{{ order.product }}</td>
+				</tr>
+				{% endfor %}
 			</table>
 		</div>
 	</div>
@@ -32,7 +38,15 @@
 					<th>Update</th>
 					<th>Remove</th>
 				</tr>
-		
+				{% for order in orders %}
+				<tr>
+					<td>{{ order.product }}</td>
+					<td>{{ order.date_created }}</td>
+					<td>{{ order.status }}</td>
+					<td><a href=""><button class="btn btn-primary">Update</button></a></td>
+					<td><a href=""><button class="btn btn-danger">Remove</button></a></td>
+				</tr>
+				{% endfor %}
 			</table>
 		</div>
 	</div>
